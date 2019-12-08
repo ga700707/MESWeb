@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/res/img/loginpage6.jpg');
+
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    font-size: .875rem;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    font-display: fallback;
+}
+
+.form-heading {
+    color: #fff;
+}
+
+#loginForm .panel h2 {
+    color: #444444;
+    font-size: 25px;
+    margin: 0 0 8px 0;
+    
+}
+
+#loginForm .panel p {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 24px;
+
+}
+
+#loginForm .form-control {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    max-height: 5%;
+    line-height: 1%;
+}
+   
+
+#loginForm .main-div {
+    /* background: #ffffff none repeat scroll 0 0; */
+    background-color: rgba(255,255,255,0.9) !important;
+    border-radius: 4pt;
+    margin: 10pt auto 30pt;
+    max-width:35em;
+    padding: 1% 1% 2% 2%;
+    background-image: url('/res/img/loginform2.jpg');
+    
+
+}
+#loginForm .main-div .panel{
+    /* background: #ffffff none repeat scroll 0 0; */
+    font-size:15pt;
+
+}
+#loginForm .form-group {
+    margin-bottom: 10px;
+}
+
+#loginForm {
+    text-align: center;
+}
+
+#loginForm .forgot a {
+    color: #777777;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+#loginForm .btn {
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+}
+
+#loginForm .btn.btn-primary {
+    background: #f0ad4e none repeat scroll 0 0;
+    border-color: #f0ad4e;
+}
+
+#loginForm .btn.btn-secondary {
+    background: #aaaaaa none repeat scroll 0 0;
+    border-color: #aaaaaa;
+}
+
+#loginForm .forgot {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+#loginForm .botto-text {
+    color: #ffffff;
+    font-size: 14px;
+    margin: auto;
+}
+
+#loginForm .btn.btn-primary.reset {
+    background: #ff9900 none repeat scroll 0 0;
+}
+
+#loginForm .back {
+    text-align: left;
+    margin-top: 10px;
+}
+
+#loginForm .back a {
+    color: #444444;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+/*
+* Content
+*/
+
+[role="main"] {
+    padding-top: 133px; /* Space for fixed navbar */
+}
+
+@media (min-width: 768px) {
+    [role="main"] {
+        padding-top: 48px; /* Space for fixed navbar */
+    }
+}
+
+/*
+* Navbar
+*/
+
+
+
+.navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+iframe{
+    width: 100%;
+    height: calc(100vh - 49px - 50px - 29px - 40px);
+    min-height: calc(100vh - 49px - 50px - 29px - 40px);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#iframe-content{
+    width: 100%;
+    height: calc(100vh - 49px - 50px - 29px - 40px);
+    min-height: calc(100vh - 49px - 50px - 29px - 40px);
+}

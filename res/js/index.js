@@ -33,8 +33,14 @@ function mainInitial() {
         $("div.log").text("Triggered ajaxError handler.");
     });
     $("#iframe-content").attr("src", "/Views/gondan/userpage.html");
+    
 
-
+}
+function ToUserpage2(){
+    $("#iframe-content").attr("src", "/Views/gondan/userpage2.html");
+}
+function ToAPS(){
+    $("#iframe-content").attr("src", "/Views/gondan/APS.html");
 }
 function StudentInitial(StudentId) {
     $("#loginForm").hide();

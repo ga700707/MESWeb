@@ -1,9 +1,9 @@
 //var webApiUrl = "http://localhost:49705";
 var webApiUrl = ""
 if (window.location.port == "5500")
-    webApiUrl = "http://163.13.243.125:6500";
+    webApiUrl = "http://localhost:6500";
 else
-    webApiUrl = "http://163.13.243.125:6500";
+    webApiUrl = "http://localhost:6500";
 console.log(webApiUrl)
 emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 
@@ -14,7 +14,7 @@ function mainInitial() {
     $("body").css("background-image", "none");
     var generateMenuType = (getCookie('type') == 'S') ? 'S' : 0;
     $.getScript("/res/data/menuData.js").done(function () {
-        //<!--管理員聊天室 -->
+        //<!--管理員聊室 -->
 
         $.each(menuData[getCookie('type')], function () {
             $("#menu").append(
@@ -32,7 +32,7 @@ function mainInitial() {
     }).fail(function (jqxhr, settings, exception) {
         $("div.log").text("Triggered ajaxError handler.");
     });
-    $("#iframe-content").attr("src", "/Views/Student/StudentManager.html");
+    $("#iframe-content").attr("src", "/Views/gondan/userpage.html");
 
 
 }

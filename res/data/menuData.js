@@ -52,6 +52,14 @@ var menuData = {
             sub: null,
             icon: null
         },
+        {
+            title: '工單管理系統' ,
+            link: 'javascript:void(0);',
+            command: 'userpage',
+            views: 'gondan',
+            sub: null,
+            icon: null
+        }
     
     ],
   

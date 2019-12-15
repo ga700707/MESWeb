@@ -15,7 +15,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <link href="/res/bootstrap/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="/res/css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="res/css/index.css">
+    <link rel="stylesheet" type="text/css" href="res/css/logcss.css">
+    <link rel="stylesheet" type="text/css" href="res/bootstrap/bootstrap.min2.css">
+
     <style type="text/css">
         .test li {
             font-size: 1.2em;
@@ -34,8 +37,53 @@
 </head>
 
 <body>
+    <div class="container-fluid" id="loginForm">
+        <div class="row no-gutter">
+        <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+        <div class="col-md-8 col-lg-6">
+            <div class="login d-flex align-items-center py-5">
+            <div class="container">
+                <div class="row">
+                <div class="col-md-9 col-lg-8 mx-auto">
+                    <h3 class="login-heading mb-4">訂單管理系統</h3>
+                    <form id="AccountLogin" onsubmit="return accountLogin(this)">
+                    <div class="form-label-group">
+                        
+                        <input type="email" id="inputEmail" class="form-control"  name="inputEmail"
+                        placeholder="example@email.com" required autofocus>
+                        <label for="inputEmail">Email address</label>
+                    </div>
+    
+                    <div class="form-label-group">
+                        <input type="password"  class="form-control" id="inputPassword" name="inputPassword"
+                        placeholder="Password" required>
+                        <label for="inputPassword">Password</label>
+                    </div>
+    
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Remember password</label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+                    <div class="text-center">
+                        <a class="small" href="#">Forgot password?</a></div>
+                    <div class="text-center co">
+                        <a class="small" href="#"  onclick=open_regist()>register</a></div>
+                    </form>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="mainPage" style="display: none; ">
 
-    <div id="loginForm">
+
+
+
+
+   <!----- <div id="loginForm">
         <div class="main-div">
             <div class="panel">
                 <h2>QRCode管理員後台登入頁面</h2>
@@ -59,7 +107,7 @@
                 </div>
                 <!-- <div class="forgot">
                     <a href="javascript:void(0);">你忘記密碼了嗎?</a>
-                </div> -->
+                </div> -
                 <div class="row">
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">登入</button>
@@ -68,12 +116,12 @@
                     </div>
                     <!-- <div class="col-6">
                         <button type="button" class="btn btn-secondary" disabled>註冊</button>
-                    </div> -->
+                    </div> -
                 </div>
             </form>
         </div>
     </div>
-    <div id="mainPage" style="display: none; ">
+    <div id="mainPage" style="display: none; ">-->
 
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size:1.2em;">
@@ -93,6 +141,16 @@
                 </span>
             </div>
         </nav>
+        <nav>
+                <ul >
+                  <li><a href="#" class="active">首頁</a></li>
+                  <li><a href="#">進度</a></li>
+                  <li><a href="#">資源管理</a></li>
+                  <li><a href="#">訂單</a></li>
+                  <li><a href="#">工單</a></li>
+                  <li><a href="#">日程</a></li>
+                </ul>
+            </nav>
         <main role="main">
             <iframe src="" id="iframe-content"></iframe>
     </div>

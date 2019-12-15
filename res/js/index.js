@@ -33,8 +33,17 @@ function mainInitial() {
         $("div.log").text("Triggered ajaxError handler.");
     });
     $("#iframe-content").attr("src", "/Views/gondan/userpage.html");
+    
 
-
+}
+function ToUserpage2(){
+    $("#iframe-content").attr("src", "/Views/gondan/userpage2.html");
+}
+function ToAPS(){
+    $("#iframe-content").attr("src", "/Views/gondan/APS.html");
+}
+function open_regist(){
+    window.open ("Register.html", "newwindow", "height=700, width=400, top=100, left=100, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no")
 }
 function StudentInitial(StudentId) {
     $("#loginForm").hide();

@@ -1,0 +1,11 @@
+.backgorund-default:focus,
+.backgorund-default:hover {
+    transition: all 0.4s ease-in-out;
+    cursor: default;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+.searchFrame{
+	width:140px;
+	height:360px;
+	background-color: beige
+}

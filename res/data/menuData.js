@@ -29,23 +29,16 @@ var menuData = {
     // ],
     "P":[
         {
-            title: '教師帳號管理系統' ,
+            title: '首頁' ,
             link: 'javascript:void(0);',
             command: 'AccountManager',
             views: 'Account',
             sub: null,
             icon: null
         },
-        // {
-        //     title: '校園管理者帳號' ,
-        //     link: 'javascript:void(0);',
-        //     command: 'AM',
-        //     views: 'AccountManage',
-        //     sub: null,
-        //     icon: null
-        // },
+       
         {
-            title: '學生資料管理系統' ,
+            title: '進度' ,
             link: 'javascript:void(0);',
             command: 'StudentManager',
             views: 'Student',
@@ -53,15 +46,38 @@ var menuData = {
             icon: null
         },
         {
-            title: '工單管理系統' ,
+            title: '資源管理' ,
+            link: 'javascript:void(0);',
+            command: 'userpage',
+            views: 'gondan',
+            sub: null,
+            icon: null
+        },
+        {
+            title: '訂單' ,
+            link: 'javascript:void(0);',
+            command: 'userpage',
+            views: 'gondan',
+            sub: null,
+            icon: null
+        },
+        {
+            title: '工單' ,
+            link: 'javascript:void(0);',
+            command: 'userpage',
+            views: 'gondan',
+            sub: null,
+            icon: null
+        },
+        {
+            title: '日程' ,
             link: 'javascript:void(0);',
             command: 'userpage',
             views: 'gondan',
             sub: null,
             icon: null
         }
-    
     ],
-  
+    
     
 };

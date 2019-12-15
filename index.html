@@ -29,7 +29,7 @@
     <script>
         $(document).ready(function () {
             if (token) mainInitial(StudentId);
-           
+
 
         });
     </script>
@@ -39,42 +39,44 @@
 <body>
     <div class="container-fluid" id="loginForm">
         <div class="row no-gutter">
-        <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-        <div class="col-md-8 col-lg-6">
-            <div class="login d-flex align-items-center py-5">
-            <div class="container">
-                <div class="row">
-                <div class="col-md-9 col-lg-8 mx-auto">
-                    <h3 class="login-heading mb-4">訂單管理系統</h3>
-                    <form id="AccountLogin" onsubmit="return accountLogin(this)">
-                    <div class="form-label-group">
-                        
-                        <input type="email" id="inputEmail" class="form-control"  name="inputEmail"
-                        placeholder="example@email.com" required autofocus>
-                        <label for="inputEmail">Email address</label>
+            <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+            <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <h3 class="login-heading mb-4">訂單管理系統</h3>
+                                <form id="AccountLogin" onsubmit="return accountLogin(this)">
+                                    <div class="form-label-group">
+
+                                        <input type="email" id="inputEmail" class="form-control" name="inputEmail"
+                                            placeholder="example@email.com" required autofocus>
+                                        <label for="inputEmail">Email address</label>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <input type="password" class="form-control" id="inputPassword"
+                                            name="inputPassword" placeholder="Password" required>
+                                        <label for="inputPassword">Password</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Remember password</label>
+                                    </div>
+                                    <button
+                                        class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                                        type="submit">Sign in</button>
+                                    <div class="text-center">
+                                        <a class="small" href="#">Forgot password?</a></div>
+                                    <div class="text-center co">
+                                        <a class="small" href="#" onclick=open_regist()>register</a></div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-    
-                    <div class="form-label-group">
-                        <input type="password"  class="form-control" id="inputPassword" name="inputPassword"
-                        placeholder="Password" required>
-                        <label for="inputPassword">Password</label>
-                    </div>
-    
-                    <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
-                    <div class="text-center">
-                        <a class="small" href="#">Forgot password?</a></div>
-                    <div class="text-center co">
-                        <a class="small" href="#"  onclick=open_regist()>register</a></div>
-                    </form>
-                </div>
                 </div>
             </div>
-            </div>
-        </div>
         </div>
     </div>
     <div id="mainPage" style="display: none; ">
@@ -83,7 +85,7 @@
 
 
 
-   <!----- <div id="loginForm">
+        <!----- <div id="loginForm">
         <div class="main-div">
             <div class="panel">
                 <h2>QRCode管理員後台登入頁面</h2>
@@ -124,33 +126,22 @@
     <div id="mainPage" style="display: none; ">-->
 
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size:1.2em;">
-            <a class="navbar-brand " style="font-size:1.4em;" href="#">QRCode</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="font-size:1.2em;">
+            <a class="navbar-brand " style="font-size:1.4em;color:black;" href="#">QRCode</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mr-auto" id="menu"></ul>
+                <ul class="nav.black mr-auto" id="menu"></ul>
 
-          
-                <button class="btn btn-outline-success my-2 my-sm-0" onclick="accountEdit();"
-                    type="submit">更改密碼</button>
-                <button class="btn btn-outline-success my-2 my-sm-0" onclick="accountLogout();"
-                    type="submit">登出</button>
+
+                <button class="btn btn-outline-dark my-2 my-sm-0" onclick="accountEdit();" type="submit">更改密碼</button>
+                <button class="btn btn-outline-danger my-2 my-sm-0" onclick="accountLogout();" type="submit">登出</button>
                 </span>
             </div>
         </nav>
-        <nav>
-                <ul >
-                  <li><a href="#" class="active">首頁</a></li>
-                  <li><a href="#">進度</a></li>
-                  <li><a href="#">資源管理</a></li>
-                  <li><a href="#">訂單</a></li>
-                  <li><a href="#">工單</a></li>
-                  <li><a href="#">日程</a></li>
-                </ul>
-            </nav>
+
         <main role="main">
             <iframe src="" id="iframe-content"></iframe>
     </div>

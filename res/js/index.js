@@ -1,9 +1,9 @@
 //var webApiUrl = "http://localhost:49705";
 var webApiUrl = ""
 if (window.location.port == "5500")
-    webApiUrl = "http://163.13.243.125:6500";
+    webApiUrl = "http://localhost:6500";
 else
-    webApiUrl = "http://163.13.243.125:6500";
+    webApiUrl = "http://localhost:6500";
 console.log(webApiUrl)
 emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 

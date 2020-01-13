@@ -31,8 +31,8 @@ var menuData = {
         {
             title: '首頁' ,
             link: 'javascript:void(0);',
-            command: 'AccountManager',
-            views: 'Account',
+            command: 'userpage',
+            views: 'gondan',
             sub: null,
             icon: null
         },
@@ -40,8 +40,8 @@ var menuData = {
         {
             title: '進度' ,
             link: 'javascript:void(0);',
-            command: 'StudentManager',
-            views: 'Student',
+            command: 'userpage',
+            views: 'gondan',
             sub: null,
             icon: null
         },
@@ -56,7 +56,7 @@ var menuData = {
         {
             title: '訂單' ,
             link: 'javascript:void(0);',
-            command: 'userpage',
+            command: 'APS',
             views: 'gondan',
             sub: null,
             icon: null
@@ -64,7 +64,7 @@ var menuData = {
         {
             title: '工單' ,
             link: 'javascript:void(0);',
-            command: 'userpage',
+            command: 'userpage2',
             views: 'gondan',
             sub: null,
             icon: null

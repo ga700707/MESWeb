@@ -1,0 +1,42 @@
+.bg{
+    padding: 2%;
+}
+.nameblock{
+    position: relative;
+    left:10%;
+    width: 400px;
+}
+.name{
+    font-size: 40px;
+    padding-left: 5%;
+}
+.AfterName{
+    font-family:DFKai-sb;
+    color:#888888;
+  }
+.undername{
+    position: relative;
+    left:15%;
+    width: 1000px;
+}
+#U ul li{
+    font-size: 30px;
+    display: inline;
+    padding: 100px;
+}
+
+.bottomblock{
+    position: relative;
+    left: 10%;
+}
+
+#B ul li{
+    font-size: xx-large;
+    
+    padding: 1%;
+    list-style-type:none;
+}
+
+#B a{
+    color: rgb(119, 119, 57);
+}

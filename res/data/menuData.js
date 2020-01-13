@@ -40,7 +40,11 @@ var menuData = {
         {
             title: '進度' ,
             link: 'javascript:void(0);',
+<<<<<<< HEAD
             command: 'userpage',
+=======
+            command: 'jindu',
+>>>>>>> d5a10cc4a236ac135165db8cb1f0dff0534ef971
             views: 'gondan',
             sub: null,
             icon: null
@@ -72,7 +76,7 @@ var menuData = {
         {
             title: '日程' ,
             link: 'javascript:void(0);',
-            command: 'userpage',
+            command: 'personal',
             views: 'gondan',
             sub: null,
             icon: null

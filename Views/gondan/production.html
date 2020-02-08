@@ -23,18 +23,8 @@
 
 
   <!------ Include the above in your HEAD tag ---------->
-  <!-- icon -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="../../res/css/APS.css">
-  <style>
-    .btn {
-      border: none;
-      float: right;
 
-      cursor: pointer;
-    }
-  </style>
   <script>
 
     $(document).ready(function () {
@@ -68,13 +58,11 @@
           "targets": 0, // add edit buttononclick="recordChat(' + row.id + ')
           "render": function (data, type, row) {
             var html = "";
-            html += '<div class="row btn btn-secondary btn-round btn-block w3-xlarge">' + row.id
-            html += '<button onclick="deleteData(' + row.id + ');" class="btn "><i class="fa fa-trash w3-xlarge"></i></button>'
-            html += '<button onclick="peopleEdit(' + row.id + ');" class="btn "><i class="fa fa-pencil w3-xlarge"></i></button>'
-            html += '</div>'
-            return html
-          },
+            html += '<button onclick="peopleEdit(' + row.id + ');" class="btn btn-secondary btn-round btn-block" data-toggle="modal" data-target=".animate"data-ui-class="a-fadeUp">'
+            html += '<span  style="float:left;" class="glyphicon glyphicon-pencil"></span>' + row.id + '</button>'
 
+            return html
+          }
         }],
         "dom": 'Pfrtip', // enable custommize toolbar elements
         "language": { // change display text
@@ -89,7 +77,6 @@
         }
 
       });
-      sleep(1000);
       var machineTable = $('#machineTable').DataTable({
         "searching": false,
         "ordering": false,
@@ -119,10 +106,7 @@
           "targets": 0, // add edit buttononclick="recordChat(' + row.id + ')
           "render": function (data, type, row) {
             var html = "";
-            html += '<div class="row btn btn-secondary btn-round btn-block w3-xlarge">' + row.id
-            html += '<button onclick="deleteData(' + row.id + ');" class="btn "><i class="fa fa-trash w3-xlarge"></i></button>'
-            html += '<button onclick="machineEdit(' + row.id + ');" class="btn "><i class="fa fa-pencil w3-xlarge"></i></button>'
-            html += '</div>'
+            html += '<button class="btn btn-secondary btn-round btn-block" data-toggle="modal" data-target=".animate"data-ui-class="a-fadeUp">' + row.id + '</button>'
             return html
           }
         }],
@@ -139,8 +123,6 @@
         }
 
       });
-      sleep(1000);
-
       var cutterTable = $('#cutterTable').DataTable({
         "searching": false,
         "ordering": false,
@@ -170,10 +152,7 @@
           "targets": 0, // add edit buttononclick="recordChat(' + row.id + ')
           "render": function (data, type, row) {
             var html = "";
-            html += '<div class="row btn btn-secondary btn-round btn-block w3-xlarge">' + row.id
-            html += '<button onclick="deleteData(' + row.id + ');" class="btn "><i class="fa fa-trash w3-xlarge"></i></button>'
-            html += '<button onclick="cutterEdit(' + row.id + ');" class="btn "><i class="fa fa-pencil w3-xlarge"></i></button>'
-            html += '</div>'
+            html += '<button class="btn btn-secondary btn-round btn-block" data-toggle="modal" data-target=".animate"data-ui-class="a-fadeUp">' + row.id + '</button>'
             return html
           }
         }],
@@ -190,8 +169,6 @@
         }
 
       });
-      sleep(1000);
-
       var jigTable = $('#jigTable').DataTable({
         "searching": false,
         "ordering": false,
@@ -221,10 +198,7 @@
           "targets": 0, // add edit buttononclick="recordChat(' + row.id + ')
           "render": function (data, type, row) {
             var html = "";
-            html += '<div class="row btn btn-secondary btn-round btn-block w3-xlarge">' + row.id
-            html += '<button onclick="deleteData(' + row.id + ');" class="btn "><i class="fa fa-trash w3-xlarge"></i></button>'
-            html += '<button onclick="jigEdit(' + row.id + ');" class="btn "><i class="fa fa-pencil w3-xlarge"></i></button>'
-            html += '</div>'
+            html += '<button class="btn btn-secondary btn-round btn-block" data-toggle="modal" data-target=".animate"data-ui-class="a-fadeUp">' + row.id + '</button>'
             return html
           }
         }],
@@ -241,8 +215,6 @@
         }
 
       });
-      sleep(1000);
-
       var materialTable = $('#materialTable').DataTable({
         "searching": false,
         "ordering": false,
@@ -272,10 +244,7 @@
           "targets": 0, // add edit buttononclick="recordChat(' + row.id + ')
           "render": function (data, type, row) {
             var html = "";
-            html += '<div class="row btn btn-secondary btn-round btn-block w3-xlarge">' + row.id
-            html += '<button onclick="deleteData(' + row.id + ');" class="btn "><i class="fa fa-trash w3-xlarge"></i></button>'
-            html += '<button onclick="materialEdit(' + row.id + ');" class="btn "><i class="fa fa-pencil w3-xlarge"></i></button>'
-            html += '</div>'
+            html += '<button class="btn btn-secondary btn-round btn-block" data-toggle="modal" data-target=".animate"data-ui-class="a-fadeUp">' + row.id + '</button>'
             return html
           }
         }],
@@ -314,12 +283,6 @@
         myFunction(this, "materialTable");
       });
     });
-    function deleteData(id) {
-      var confirmStatus = confirm("是否刪除?");
-      if (confirmStatus)
-        alert("刪除成功")
-
-    }
     function myFunction(input, tableName) {
       var filter, table, tr, td, i, txtValue;
       filter = input.value.toUpperCase();
@@ -347,7 +310,6 @@
 </head>
 
 <body>
-
   <div class="row">
     <div style="padding:0px 3%;width:19%">
       <table id="peopleTable">
@@ -356,14 +318,13 @@
             <td align=" center">
               <h1>人員</h1>
             </td>
-
           </tr>
         </thead>
         <tfoot>
           <th>
-            <input style="width:100%;" placeholder="Search.." id="peopleSearch"></input>
-            <button class="createBtn btn btn-outline-info " data-toggle="modal" data-target=".animate"
-              data-ui-class="a-fadeUp" onclick="peopleCreate();" style="width:200px;">
+            <input style="width:100%;" id="peopleSearch"></input>
+            <button class="createBtn btn btn-outline-info" data-toggle="modal" data-target=".animate"
+              data-ui-class="a-fadeUp" onclick="peopleCreate();" style="width: 100%;">
               <font size="6" color="#737373" ;">新 增</font>
             </button>
           </th>
@@ -382,9 +343,9 @@
         </thead>
         <tfoot>
           <th>
-            <input style="width:100%;" placeholder="Search.." id="machineSearch"></input>
+            <input style="width:100%;" id="machineSearch"></input>
             <button class="createBtn btn btn-outline-info" data-toggle="modal" data-target=".animate"
-              data-ui-class="a-fadeUp" onclick="machineCreate();" style="width:200px;">
+              data-ui-class="a-fadeUp" onclick="machineCreate();" style="width: 100%;">
               <font size="6" color="#737373" ;">新 增</font>
             </button>
           </th>
@@ -403,9 +364,9 @@
         </thead>
         <tfoot>
           <th>
-            <input style="width:100%;" placeholder="Search.." id="cutterSearch"></input>
+            <input style="width:100%;" id="cutterSearch"></input>
             <button class="createBtn btn btn-outline-info" data-toggle="modal" data-target=".animate"
-              data-ui-class="a-fadeUp" onclick="cutterCreate();" style="width:200px;">
+              data-ui-class="a-fadeUp" onclick="cutterCreate();" style="width: 100%;">
               <font size="6" color="#737373" ;">新 增</font>
             </button>
           </th>
@@ -424,9 +385,9 @@
         </thead>
         <tfoot>
           <th>
-            <input style="width:100%;" placeholder="Search.." id="jigSearch"></input>
+            <input style="width:100%;" id="jigSearch"></input>
             <button class="createBtn btn btn-outline-info" data-toggle="modal" data-target=".animate"
-              data-ui-class="a-fadeUp" onclick="jigCreate();" style="width:200px;">
+              data-ui-class="a-fadeUp" onclick="jigCreate();" style="width: 100%;">
               <font size="6" color="#737373" ;">新 增</font>
             </button>
           </th>
@@ -445,9 +406,9 @@
         </thead>
         <tfoot>
           <th>
-            <input style="width:100%;" placeholder="Search.." id="materialSearch"></input>
+            <input style="width:100%;" id="materialSearch"></input>
             <button class="createBtn btn btn-outline-info" data-toggle="modal" data-target=".animate"
-              data-ui-class="a-fadeUp" onclick="materialCreate();" style="width:200px;">
+              data-ui-class="a-fadeUp" onclick="materialCreate();" style="width: 100%;">
               <font size="6" color="#737373" ;">新 增</font>
             </button>
           </th>

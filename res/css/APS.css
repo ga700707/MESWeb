@@ -4,7 +4,7 @@
 
 
 .myForm{
- background-color: rgba(0,0,0,0.5) !important;
+ background-color: rgba(2, 49, 49, 0.8) !important;
  padding: 15px !important;
 border-radius: 15px !important;
 color: white;
@@ -46,4 +46,5 @@ border:1px solid #ccc !important;
  border-radius: 15px !important;
 background-color: #95c714 !important;
 border: 0 !important;
+height: 50px;
 }

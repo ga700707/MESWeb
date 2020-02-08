@@ -2,10 +2,22 @@
 .backgorund-default:hover {
     transition: all 0.4s ease-in-out;
     cursor: default;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 16px #F5F5F5;
 }
 .searchFrame{
 	width:140px;
 	height:360px;
 	background-color: beige
 }
+
+
+.createBtn{
+    font-style: color;
+	width:140px;
+	height:60px;
+	background-color: gainsboro
+}
+.CreateFont{
+    font-family:DFKai-sb;
+    color:#888888;
+  }
